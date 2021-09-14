@@ -2,15 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import auth from '@react-native-firebase/auth';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import { RNCamera} from 'react-native-camera';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 GoogleSignin.configure({
   webClientId: '56003830875-3pl0qmrunoekikvtgpoaif4hi7edples.apps.googleusercontent.com',
 });
 
+const Stack = createNativeStackNavigator();
+
 export default function App() {
   // Set an initializing state whilst Firebase connects
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState();
+  const [barcode, setBarcode] = useState(null);
 
   function GoogleSignIn() {
     return (
@@ -20,6 +26,8 @@ export default function App() {
       />
     );
   }
+
+  
 
   async function onGoogleButtonPress() {
     // Get the users ID token
@@ -47,14 +55,37 @@ export default function App() {
 
   if (!user) {
     return (
-      <View style = {styles.container}>
-        <Text style = {styles.text}> Food Scanner </Text>
-        
-        <Button
-          title="Google Sign-In"
-          onPress={() => onGoogleButtonPress().then(() => console.log('Signed in with Google!'))}
-        />
-      </View>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Login">  
+            <View style = {styles.container}>
+              <Text style = {styles.text}> Food Scanner </Text>
+              
+              <Button
+                title="Google Sign-In"
+                onPress={() => onGoogleButtonPress().then(() => console.log('Signed in with Google!'))}
+              />
+            </View>
+          </Stack.Screen>
+          <Stack.Screen>
+            <View style = {styles.container}>
+              {barcode ? (
+                  <View style={[styles.rnCamera, styles.rmCameraResult]}>
+                    <Text style={styles.rmCameraResultText}>{barcode.data}</Text>
+                    <Text style={styles.rmCameraResultText}>{barcode.type}</Text>
+                  </View>
+                  ) : (
+                  <RNCamera
+                    onBarCodeRead={setBarcode}
+                    style = {styles.camera}
+                  >
+                  </RNCamera>)
+              }
+            </View>
+          </Stack.Screen>
+            
+        </Stack.Navigator>
+      </NavigationContainer>
     );
   }
     return (
@@ -74,8 +105,14 @@ const styles = StyleSheet.create({
 
   text: {
     justifyContent: 'center',
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 'bold',
     textAlign: 'center',
+  },
+
+  camera: {
+    padding: 50,
+    flex: 2,
+    justifyContent: 'center',
   },
 })
