@@ -26,7 +26,7 @@ This is the recipe page of the app, where the user has the option to view past r
 ## Dependencies 
 
 
-We used Google Firebase for all our storage, including User (Authentication) and recipes. Here are some of our databases. 
+We used Google Firebase for all our storage, including user authentication and recipes. Here are some of our databases. 
 
 
 As mentioned earlier, we used the Food Data Central API: https://fdc.nal.usda.gov/api-guide.html and https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.diabetes.org%2Fnutrition%2Fhealthy-food-choices-made-easy&psig=AOvVaw3kiGgs4_6plUz60Inz9xpc&ust=1631834336834000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMC9juOOgvMCFQAAAAAdAAAAABAD as our background image for the login screen. 
