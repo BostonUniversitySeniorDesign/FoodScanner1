@@ -17,7 +17,18 @@ Once logged in, the user is taken to this screen, where they have the option to 
 
 
 
+This is the bar code scanner of the app, which uses a REST service interacting with the FDC API to return calories per serving of the food item. 
 
 
+This is the recipe page of the app, where the user has the option to view past recipes or write a new recipe. The data is stored in Firebase's Cloud Firestore.
+
+
+## Dependencies 
+
+
+We used Google Firebase for all our storage, including User (Authentication) and recipes. Here are some of our databases. 
+
+
+As mentioned earlier, we used the Food Data Central API: https://fdc.nal.usda.gov/api-guide.html and https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.diabetes.org%2Fnutrition%2Fhealthy-food-choices-made-easy&psig=AOvVaw3kiGgs4_6plUz60Inz9xpc&ust=1631834336834000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMC9juOOgvMCFQAAAAAdAAAAABAD as our background image for the login screen. 
 
 
