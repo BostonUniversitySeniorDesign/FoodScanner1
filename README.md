@@ -6,6 +6,9 @@ This is a user friendly application built with react-native over the course of 1
 
 The sprints for this project are under the projects section of this repository. 
 
+![foodsccanner](https://user-images.githubusercontent.com/46230582/133524058-cad7e0b8-176d-4079-92db-10da286e92b9.jpeg)
+
+
 
 
 
