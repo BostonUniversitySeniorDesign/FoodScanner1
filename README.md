@@ -22,10 +22,11 @@ Once logged in, the user is taken to the home page, where they have the option t
 
 ## Scanner
 
-![food4](https://user-images.githubusercontent.com/46230582/133693890-ad43e4ec-2e52-4902-9f45-b624c71ae9d6.jpeg)
+![food4](https://user-images.githubusercontent.com/46230582/133693890-ad43e4ec-2e52-4902-9f45-b624c71ae9d6.jpeg) ![food5](https://user-images.githubusercontent.com/46230582/133693974-a12577d4-6f8a-4d92-8690-cfa6f2153d59.jpeg)
 
 
-This is the bar code scanner of the app, which uses a REST service interacting with the FDC API to return calories per serving of the food item. 
+
+This is the bar code scanner of the app, which uses a REST service interacting with the FDC API to return calories per serving of the food item. Tha calories per serving is user input and the default value is grams. 
 
 ## Recipes
 
