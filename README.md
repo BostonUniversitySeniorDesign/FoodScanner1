@@ -1,4 +1,4 @@
-# FoodScanner
+# Food Scanner
 
 ## Application by Harleen Chaudhary and Zhe Tu
 
