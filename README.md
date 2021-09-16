@@ -11,7 +11,7 @@ The sprints for this project are under the projects section of this repository.
 ![foodsccanner](https://user-images.githubusercontent.com/46230582/133524284-843d974b-cc79-462b-85b2-5c7279d58446.jpeg)
 
 
-This is the login page of the app, using gmail authentication to log in. 
+This is the login page of the app, using gmail authentication to log in. The authentication is using Firebase for authentication and storing the data. 
 
 ## Home Page
 
