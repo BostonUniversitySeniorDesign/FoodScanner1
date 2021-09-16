@@ -22,7 +22,8 @@ Once logged in, the user is taken to the home page, where they have the option t
 
 ## Scanner
 
-![food4](https://user-images.githubusercontent.com/46230582/133693890-ad43e4ec-2e52-4902-9f45-b624c71ae9d6.jpeg) ![food5](https://user-images.githubusercontent.com/46230582/133693974-a12577d4-6f8a-4d92-8690-cfa6f2153d59.jpeg)
+![food4](https://user-images.githubusercontent.com/46230582/133693890-ad43e4ec-2e52-4902-9f45-b624c71ae9d6.jpeg) ![food5](https://user-images.githubusercontent.com/46230582/133694079-ed31d529-d30a-4b36-a4e0-dc581ba19cd2.jpeg)
+
 
 
 
