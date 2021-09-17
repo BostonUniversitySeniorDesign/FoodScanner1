@@ -8,15 +8,15 @@ The sprints for this project are under the projects section of this repository.
 
 ## Login Screen
 
-![foodsccanner](https://user-images.githubusercontent.com/46230582/133524284-843d974b-cc79-462b-85b2-5c7279d58446.jpeg) ![food8](https://user-images.githubusercontent.com/46230582/133710498-c3f0ed00-2e6d-4a3f-93a5-9c2e15f340f4.jpeg)
-
+![foodsccanner](https://user-images.githubusercontent.com/46230582/133524284-843d974b-cc79-462b-85b2-5c7279d58446.jpeg) ![food8](https://user-images.githubusercontent.com/46230582/133710718-f66e5ff4-9d31-4393-bfc2-99eb3eadd287.jpeg)
 
 
 This is the login page of the app, using gmail authentication to log in. The authentication is using Firebase for authentication and storing the data. Once logged in, the user is taken to this page where they have the option to navigate to the home page or log out. 
 
 ## Home Page
 
-![food7](https://user-images.githubusercontent.com/46230582/133710560-61a0f0e7-7ca2-4078-9a35-60d92bb9a510.jpeg)
+![food7](https://user-images.githubusercontent.com/46230582/133710788-c54bf2e2-56c2-4e16-8d81-fefb48bf02b9.jpeg)
+
 
 
 This is the home page, where the user has the option to either scan a food item or write a recipe. They can also view old recipes. All the recipes and food item scans are being stored in Firestore Database. 
