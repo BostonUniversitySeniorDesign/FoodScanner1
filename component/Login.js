@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Component } from 'react';
 import { View, Text, Button, StyleSheet, TextInput, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
 import auth from '@react-native-firebase/auth';
+import firestore from '@react-native-firebase/firestore';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 
 GoogleSignin.configure({
@@ -28,6 +29,15 @@ export default function LoginScreen ({ navigation }) {
     
       // Create a Google credential with the token
       const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+
+      //global.uid = googleCredential;
+
+      const user = {
+        Recipe: "",
+
+      }
+
+      //await firestore().collection("Users").doc(global.uid).set(user);
     
       // Sign-in the user with the credential
       return auth().signInWithCredential(googleCredential);

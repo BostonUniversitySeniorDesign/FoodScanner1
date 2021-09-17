@@ -1,19 +1,34 @@
 import React, { Component } from 'react';
 import { Button, StyleSheet, TextInput, ScrollView, ActivityIndicator, View } from 'react-native';
 import firestore from '@react-native-firebase/firestore';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import { ListItem } from 'react-native-elements'
 
 export default class RecipeScreen extends React.Component {
     state = {
-        Recipe: ""
+        Recipe: "",
+        uid:"",
+        Old:" ",
       }
-      constructor() {
-        super();
-        //this.getUser();
-        this.dbRef = firestore().collection('Users');
+    
+      constructor(props) {
+        super(props);
+        this.getUser();
+        this.setState
+        this.dbRef = firestore().collection('Users').doc(this.state.uid);
         this.state = {
             Recipe: '',
         }; 
+      }
+
+      getUser = async () => {
+        const id = await GoogleSignin.getCurrentUser();
+        this.setState({
+          Recipe: "",
+          uid: id,
+          Old:" ",
+        });
+
       }
     
       inputValueUpdate = (val, prop) => {
@@ -23,15 +38,34 @@ export default class RecipeScreen extends React.Component {
       }
 
       storeUser() {
-        this.dbRef.add({
+        /*this.dbRef.onSnapshot(doc => {this.setState({
+          Old: doc.Recipe,
+        })});*/
+        //const old = this.state.Recipe;
+
+        if(this.state.Old === " ") {
+          this.dbRef.set({
             Recipe: this.state.Recipe
         }).then((res) => {
             this.setState({
-                Recipe: ''
+                Old: this.state.Recipe,
             });
 
         })
 
+        }
+
+        else {
+
+        this.dbRef.set({
+            Recipe: this.state.Old + ' / ' + this.state.Recipe
+        }).then((res) => {
+            this.setState({
+                Old: this.state.Old + ' / ' + this.state.Recipe,
+            });
+
+        })
+        }
       }
 
     render() {
