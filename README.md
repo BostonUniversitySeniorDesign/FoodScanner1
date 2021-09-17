@@ -8,7 +8,7 @@ The sprints for this project are under the projects section of this repository.
 
 ## Login Screen
 
-![foodsccanner](https://user-images.githubusercontent.com/46230582/133524284-843d974b-cc79-462b-85b2-5c7279d58446.jpeg) ![food8](https://user-images.githubusercontent.com/46230582/133710718-f66e5ff4-9d31-4393-bfc2-99eb3eadd287.jpeg)
+![foodsccanner](https://user-images.githubusercontent.com/46230582/133524284-843d974b-cc79-462b-85b2-5c7279d58446.jpeg) ![food8](https://user-images.githubusercontent.com/46230582/133710943-ef47cbe7-9254-40d3-a48a-ed73bfcd2ec3.jpeg)
 
 
 This is the login page of the app, using gmail authentication to log in. The authentication is using Firebase for authentication and storing the data. Once logged in, the user is taken to this page where they have the option to navigate to the home page or log out. 
@@ -17,8 +17,6 @@ This is the login page of the app, using gmail authentication to log in. The aut
 
 ![food7](https://user-images.githubusercontent.com/46230582/133710788-c54bf2e2-56c2-4e16-8d81-fefb48bf02b9.jpeg)
 
-
-
 This is the home page, where the user has the option to either scan a food item or write a recipe. They can also view old recipes. All the recipes and food item scans are being stored in Firestore Database. 
 
 
@@ -26,15 +24,11 @@ This is the home page, where the user has the option to either scan a food item 
 
 ![food4](https://user-images.githubusercontent.com/46230582/133693890-ad43e4ec-2e52-4902-9f45-b624c71ae9d6.jpeg) ![food5](https://user-images.githubusercontent.com/46230582/133694079-ed31d529-d30a-4b36-a4e0-dc581ba19cd2.jpeg)
 
-
-
-
 This is the bar code scanner of the app, which uses a REST service interacting with the FDC API to return calories per serving of the food item. Tha calories per serving is user input and the default value is grams. 
 
 ## Recipes
 
-![food6](https://user-images.githubusercontent.com/46230582/133710652-33470d28-8381-4166-b29e-d92cbe0b89c2.jpeg)
-
+![food6](https://user-images.githubusercontent.com/46230582/133710875-b4a6394c-5afd-4b6f-8076-2271703fd454.jpeg)
 
 This is the recipe page of the app, where the user has the option to view past recipes or write a new recipe. The data entered by the user is stored in Firebase's Cloud Firestore.
 
@@ -45,8 +39,6 @@ This is the recipe page of the app, where the user has the option to view past r
 We used Google Firebase for all our storage, including user authentication and recipes. Here are some of our databases. 
 
 ![food3](https://user-images.githubusercontent.com/46230582/133693757-dd4b8a2f-c2f1-4274-aa4a-d61619e665aa.jpeg)
-
-
 
 
 As mentioned earlier, we used the Food Data Central API: https://fdc.nal.usda.gov/api-guide.html and https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.diabetes.org%2Fnutrition%2Fhealthy-food-choices-made-easy&psig=AOvVaw3kiGgs4_6plUz60Inz9xpc&ust=1631834336834000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMC9juOOgvMCFQAAAAAdAAAAABAD as our background image for the login screen. 
