@@ -8,16 +8,18 @@ The sprints for this project are under the projects section of this repository.
 
 ## Login Screen
 
-![foodsccanner](https://user-images.githubusercontent.com/46230582/133524284-843d974b-cc79-462b-85b2-5c7279d58446.jpeg)
+![foodsccanner](https://user-images.githubusercontent.com/46230582/133524284-843d974b-cc79-462b-85b2-5c7279d58446.jpeg) ![food8](https://user-images.githubusercontent.com/46230582/133710498-c3f0ed00-2e6d-4a3f-93a5-9c2e15f340f4.jpeg)
 
 
-This is the login page of the app, using gmail authentication to log in. The authentication is using Firebase for authentication and storing the data. 
+
+This is the login page of the app, using gmail authentication to log in. The authentication is using Firebase for authentication and storing the data. Once logged in, the user is taken to this page where they have the option to navigate to the home page or log out. 
 
 ## Home Page
 
-<img width="261" alt="Screen Shot 2021-09-14 at 12 25 30 PM" src="https://user-images.githubusercontent.com/46230582/133524397-37aac2a9-04a6-4ba8-8421-6081ca6ca8b1.png">
+![food7](https://user-images.githubusercontent.com/46230582/133710560-61a0f0e7-7ca2-4078-9a35-60d92bb9a510.jpeg)
 
-Once logged in, the user is taken to the home page, where they have the option to either scan a food item or write a recipe. They can also view old recipes. All the recipes and food item scans are being stored in Firestore Database. 
+
+This is the home page, where the user has the option to either scan a food item or write a recipe. They can also view old recipes. All the recipes and food item scans are being stored in Firestore Database. 
 
 
 ## Scanner
@@ -30,6 +32,8 @@ Once logged in, the user is taken to the home page, where they have the option t
 This is the bar code scanner of the app, which uses a REST service interacting with the FDC API to return calories per serving of the food item. Tha calories per serving is user input and the default value is grams. 
 
 ## Recipes
+
+![food6](https://user-images.githubusercontent.com/46230582/133710652-33470d28-8381-4166-b29e-d92cbe0b89c2.jpeg)
 
 
 This is the recipe page of the app, where the user has the option to view past recipes or write a new recipe. The data entered by the user is stored in Firebase's Cloud Firestore.
