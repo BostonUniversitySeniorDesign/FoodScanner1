@@ -23,7 +23,7 @@ This is the home page, where the user has the option to either scan a food item 
 
 ## Scanner
 
-![food4](https://user-images.githubusercontent.com/46230582/133711172-da0faa4c-7744-4f30-bc09-27c8eee9c077.jpeg) ![food5](https://user-images.githubusercontent.com/46230582/133711180-25ce68ff-9abd-4a3f-8ed3-fcdd64b9cbd8.jpeg)
+![food4](https://user-images.githubusercontent.com/46230582/133711172-da0faa4c-7744-4f30-bc09-27c8eee9c077.jpeg) ![food5](https://user-images.githubusercontent.com/46230582/133711273-363a6c9f-7357-4afb-8bdd-e7a955ebc3a8.jpeg)
 
 
 
