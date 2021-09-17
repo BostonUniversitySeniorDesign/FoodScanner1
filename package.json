@@ -19,6 +19,10 @@
     "react": "17.0.2",
     "react-native": "0.65.1",
     "react-native-camera": "^4.2.0",
+<<<<<<< HEAD
+    "react-native-elements": "^3.4.2",
+=======
+>>>>>>> 863fb1079048c7e6234ac029d2e9a310ade7cdb4
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.7.2"
   },
