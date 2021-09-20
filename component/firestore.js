@@ -40,12 +40,7 @@ export default class RecipeScreen extends React.Component {
       }
 
       storeUser() {
-        /*this.dbRef.onSnapshot(doc => {this.setState({
-          Old: doc.Recipe,
-        })});*/
-        //const old = this.state.Recipe;
-
-        //if(this.state.Old === " ") {
+        
           this.idRef.add({
             Recipe: this.state.Recipe,
             id: Lid,
@@ -55,20 +50,7 @@ export default class RecipeScreen extends React.Component {
             });
 
         })
-        console.log('OK');
-
-
-        /*else {
-
-        this.dbRef.set({
-            Recipe: this.state.Old + ' / ' + this.state.Recipe
-        }).then((res) => {
-            this.setState({
-                Old: this.state.Old + ' / ' + this.state.Recipe,
-            });
-
-        })
-        }*/
+      
       }
 
     render() {

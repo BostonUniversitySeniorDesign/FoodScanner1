@@ -19,19 +19,6 @@ export default class PRecipe extends React.Component {
 
 
     getCollection = async () => {
-        //const userArr = [];
-        //querySnapshot.forEach((res) => {
-          //const { Recipe } = res.data();
-          /*userArr.push({
-            key: res.id,
-            res,
-            Recipe,
-          });
-        });*/
-        //this.setState({
-          //Recipe,
-       //});
-        //})
         let PR = '';
         await this.subscriber
         .where('id', '==', Lid)
@@ -42,7 +29,6 @@ export default class PRecipe extends React.Component {
                 this.setState({
                     Recipe: this.state.Recipe + ' / ' + PR
                 })
-                //console.log(documentSnapshot.data().Recipe)
             })
 
         });
