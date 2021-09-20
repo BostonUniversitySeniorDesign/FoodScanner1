@@ -1,0 +1,86 @@
+//Code for the API, please test with your own key generated from the FDC API(in 'api_key', integrate this with the Camera.js file) 
+{
+        const [hasPermission, setHasPermission] = useState(null);
+        const [scanned, setScanned] = useState(false);
+        
+        
+      getCalories = (data) => {
+      var calories = data.foods[0].foodNutrients[3].value;
+      console.log(calories);
+      return calories;
+    }
+    
+   
+    getFoodName = (data) => {
+      var food_name = data.foods[0].description;
+      console.log(food_name);
+      return food_name;
+    }
+
+    useEffect(() => {
+      (async () => {
+        const { status } = await RNCamera.requestPermissionsAsync();
+        setHasPermission(status === 'granted');
+      })();
+    }, []);
+
+    const handleCode = ({ data }) => {
+      setScanned(true);
+
+      async function handleInput(){
+        let input = '';
+        console.log(input);
+        input = await getInput();
+        console.log(input);
+        return input;
+      };
+      
+     function getInput(){
+        return new Promise((resolve) =>{
+          const servingSize = Alert.prompt(
+            "Enter the number of servings",
+            undefined,undefined,'0','number-pad'
+          );
+          resolve(servingSize);
+        });
+      };
+      
+      handleInput();
+
+      APIFunc(data.substring(1));
+ }       
+
+
+
+APIFunc = (input) => {
+   api_key='';
+  fetch(`https://api.nal.usda.gov/fdc/v1/foods/search?query=${inputData}&api_key=DEMO_KEY`)
+    .then(response => response.json()) 
+    .then(
+      data => {
+        console.log(data)
+        
+        var calories = getCalories(data);
+    
+        calories_sum = calories_sum + calories;
+       
+        var name2 = getFoodName(data);
+       
+        if (name != "") {
+          name == "";
+          name = name2;
+        }
+       
+        else {
+          food_name = name2;
+        }
+
+    
+        auth.onAuthStateChanged((user) => {
+          if (!user) {
+            calories_sum = 0;
+            name2 = "";
+          }
+        });
+    })
+}
