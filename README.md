@@ -29,7 +29,8 @@ This is the bar code scanner of the app, which uses a REST service interacting w
 
 ## Recipes
 
-![food6](https://user-images.githubusercontent.com/46230582/133710875-b4a6394c-5afd-4b6f-8076-2271703fd454.jpeg) ![food4](https://user-images.githubusercontent.com/46230582/133950676-073d2c9c-a6e4-4f88-a64b-ae0578f7aed2.jpeg)
+![food6](https://user-images.githubusercontent.com/46230582/133710875-b4a6394c-5afd-4b6f-8076-2271703fd454.jpeg) ![food4](https://user-images.githubusercontent.com/46230582/133950712-024d847e-0fd2-4860-8050-ee01c34bf839.jpeg)
+
 
 
 This is the recipe page of the app, where the user has the option to view past recipes or write a new recipe. The data entered by the user is stored in Firebase's Cloud Firestore.
@@ -40,7 +41,8 @@ This is the recipe page of the app, where the user has the option to view past r
 
 We used Google Firebase for all our storage, including user authentication and recipes. Here are some of our databases. 
 
-![food3](https://user-images.githubusercontent.com/46230582/133693757-dd4b8a2f-c2f1-4274-aa4a-d61619e665aa.jpeg) ![food5](https://user-images.githubusercontent.com/46230582/133950685-59461233-21d7-4044-ad12-63b0d7dc5698.jpeg)
+![food3](https://user-images.githubusercontent.com/46230582/133693757-dd4b8a2f-c2f1-4274-aa4a-d61619e665aa.jpeg) ![food5](https://user-images.githubusercontent.com/46230582/133950716-9b78f35e-c000-45f4-810e-b367f6ac7004.jpeg)
+
 
 
 
