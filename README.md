@@ -29,7 +29,8 @@ This is the bar code scanner of the app, which uses a REST service interacting w
 
 ## Recipes
 
-![food6](https://user-images.githubusercontent.com/46230582/133710875-b4a6394c-5afd-4b6f-8076-2271703fd454.jpeg)
+![food6](https://user-images.githubusercontent.com/46230582/133710875-b4a6394c-5afd-4b6f-8076-2271703fd454.jpeg) ![food4](https://user-images.githubusercontent.com/46230582/133950676-073d2c9c-a6e4-4f88-a64b-ae0578f7aed2.jpeg)
+
 
 This is the recipe page of the app, where the user has the option to view past recipes or write a new recipe. The data entered by the user is stored in Firebase's Cloud Firestore.
 
@@ -39,7 +40,8 @@ This is the recipe page of the app, where the user has the option to view past r
 
 We used Google Firebase for all our storage, including user authentication and recipes. Here are some of our databases. 
 
-![food3](https://user-images.githubusercontent.com/46230582/133693757-dd4b8a2f-c2f1-4274-aa4a-d61619e665aa.jpeg)
+![food3](https://user-images.githubusercontent.com/46230582/133693757-dd4b8a2f-c2f1-4274-aa4a-d61619e665aa.jpeg) ![food5](https://user-images.githubusercontent.com/46230582/133950685-59461233-21d7-4044-ad12-63b0d7dc5698.jpeg)
+
 
 
 As mentioned earlier, we used the Food Data Central API: https://fdc.nal.usda.gov/api-guide.html and https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.diabetes.org%2Fnutrition%2Fhealthy-food-choices-made-easy&psig=AOvVaw3kiGgs4_6plUz60Inz9xpc&ust=1631834336834000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMC9juOOgvMCFQAAAAAdAAAAABAD as our background image for the login screen. 
