@@ -41,7 +41,8 @@ This is the recipe page of the app, where the user has the option to view past r
 
 We used Google Firebase for all our storage, including user authentication and recipes. Here are some of our databases. 
 
-![food3](https://user-images.githubusercontent.com/46230582/133693757-dd4b8a2f-c2f1-4274-aa4a-d61619e665aa.jpeg) ![food5](https://user-images.githubusercontent.com/46230582/133950716-9b78f35e-c000-45f4-810e-b367f6ac7004.jpeg)
+![food3](https://user-images.githubusercontent.com/46230582/133693757-dd4b8a2f-c2f1-4274-aa4a-d61619e665aa.jpeg) ![food5](https://user-images.githubusercontent.com/46230582/133950743-a79452fe-ed17-48df-b1d3-79a36b09c3eb.jpeg)
+
 
 
 
