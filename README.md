@@ -10,7 +10,7 @@ The sprints for this project are under the projects section of this repository.
 
 ![food20](https://user-images.githubusercontent.com/46230582/133711145-c4cc0b35-bc11-4a00-8069-f2e105071a57.jpeg) ![food8](https://user-images.githubusercontent.com/46230582/133710943-ef47cbe7-9254-40d3-a48a-ed73bfcd2ec3.jpeg)
 
-This is the login page of the app, using gmail authentication to log in. The authentication process is enabled through and stored in Google's firebase. Once logged in, the user is taken to this page(image2) where they have the option to navigate to the home page or log out. 
+This is the login page of the app, using gmail authentication to log in. The authentication process is enabled through and stored in Google's firebase. Once logged in, the user is taken to another page(image2), where they have the option to navigate to the home page or log out. 
 
 
 ## Home Page
