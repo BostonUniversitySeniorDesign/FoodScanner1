@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Component } from 'react';
 import { View, Text, Button, StyleSheet, TextInput, ImageBackground, TouchableOpacity, FlatList } from 'react-native';
 
-export default function ServingScreen ({ navigation }) {
+export default function ServingScreen () {
     const [number, onChangeNumber] = React.useState("0");
   
     return(

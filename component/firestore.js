@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Button, StyleSheet, TextInput, ScrollView, ActivityIndicator, View } from 'react-native';
+import { Button, StyleSheet, TextInput, ScrollView, ActivityIndicator, View, Text } from 'react-native';
 import firestore from '@react-native-firebase/firestore';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import {Lid} from './Login';
 import { ListItem } from 'react-native-elements'
 
 export default class RecipeScreen extends React.Component {
@@ -16,6 +17,7 @@ export default class RecipeScreen extends React.Component {
         this.getUser();
         this.setState
         this.dbRef = firestore().collection('Users').doc(this.state.uid);
+        this.idRef = firestore().collection('Users');
         this.state = {
             Recipe: '',
         }; 
@@ -43,19 +45,20 @@ export default class RecipeScreen extends React.Component {
         })});*/
         //const old = this.state.Recipe;
 
-        if(this.state.Old === " ") {
-          this.dbRef.set({
-            Recipe: this.state.Recipe
+        //if(this.state.Old === " ") {
+          this.idRef.add({
+            Recipe: this.state.Recipe,
+            id: Lid,
         }).then((res) => {
             this.setState({
                 Old: this.state.Recipe,
             });
 
         })
+        console.log('OK');
 
-        }
 
-        else {
+        /*else {
 
         this.dbRef.set({
             Recipe: this.state.Old + ' / ' + this.state.Recipe
@@ -65,32 +68,33 @@ export default class RecipeScreen extends React.Component {
             });
 
         })
-        }
+        }*/
       }
 
     render() {
         return (
-    <ScrollView style={styles.container}>
-        <View style={styles.inputGroup}>
-          <TextInput
-              placeholder={'Recipe'}
-              value={this.state.Recipe}
-              onChangeText={(val) => this.inputValueUpdate(val, 'Recipe')}
-          />
-        </View>
-        <View style={styles.button}>
-          <Button
-            title='Add Recipe'
-            onPress={() => this.storeUser()} 
-            color="#19AC52"
-          />
-        </View>
+          <ScrollView style={styles.container}>
+            
+              <View style={styles.inputGroup}>
+                <TextInput
+                    placeholder={'Recipe'}
+                    value={this.state.Recipe}
+                    onChangeText={(val) => this.inputValueUpdate(val, 'Recipe')}
+                />
+              </View>
+              <View style={styles.button}>
+                <Button
+                  title='Add Recipe'
+                  onPress={() => this.storeUser()} 
+                  color="#19AC52"
+                />
+              </View>
 
-        <Button 
-            title="Go to Past Recipes"
-            onPress={() => this.props.navigation.navigate('Past Recipes')}
-        />
-    </ScrollView>
+              <Button 
+                  title="Go to Past Recipes"
+                  onPress={() => this.props.navigation.navigate('Past Recipes')}
+              />
+          </ScrollView>
         )
     }
 

@@ -8,8 +8,9 @@ GoogleSignin.configure({
     webClientId: '56003830875-3pl0qmrunoekikvtgpoaif4hi7edples.apps.googleusercontent.com',
   });
 const image = { uri: "https://www.diabetes.org/sites/default/files/2019-08/Diabetes-Superfoods-min.jpg"};
+let Lid = "";
 
-export default function LoginScreen ({ navigation }) {
+function LoginScreen ({ navigation }) {
     const [initializing, setInitializing] = useState(true);
     const [user, setUser] = useState();
   
@@ -25,17 +26,16 @@ export default function LoginScreen ({ navigation }) {
   
     async function onGoogleButtonPress() {
       // Get the users ID token
-      const { idToken } = await GoogleSignin.signIn();
+      const { idToken, user } = await GoogleSignin.signIn();
     
       // Create a Google credential with the token
       const googleCredential = auth.GoogleAuthProvider.credential(idToken);
 
       //global.uid = googleCredential;
 
-      const user = {
-        Recipe: "",
+      Lid = user.id;
 
-      }
+      console.log(Lid);
 
       //await firestore().collection("Users").doc(global.uid).set(user);
     
@@ -67,6 +67,7 @@ export default function LoginScreen ({ navigation }) {
     if (initializing) return null;
   
     if (!user) {
+
       return (
         <View style = {styles.container}>
                 <ImageBackground source={image} resizeMode="cover" style={styles.image}> 
@@ -78,6 +79,8 @@ export default function LoginScreen ({ navigation }) {
                   />  
                 </ImageBackground>
         </View>
+
+        
   
       );
     }
@@ -88,7 +91,7 @@ export default function LoginScreen ({ navigation }) {
                   
                   <Button
                     title="Home"
-                    onPress={() => navigation.navigate('Home')}
+                    onPress={() => (navigation.navigate('Home'))}
                   />  
   
                   <Button
@@ -145,3 +148,5 @@ export default function LoginScreen ({ navigation }) {
       justifyContent: 'center',
     },
   })
+
+  export {LoginScreen as default, Lid};

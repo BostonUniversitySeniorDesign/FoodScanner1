@@ -1,39 +1,52 @@
 import React, { Component } from 'react';
 import { StyleSheet, ScrollView, ActivityIndicator, View, Text } from 'react-native';
+import {Lid} from './Login';
 import { ListItem } from 'react-native-elements'
 import firestore from '@react-native-firebase/firestore';
 
 export default class PRecipe extends React.Component {
-    constructor() {
-        super();
-        this.firestoreRef = firestore().collection('Users');
-        this.state = {
-          Recipe: ""
-        };
-    }
-
-    componentDidMount() {
-        this.unsubscribe = this.firestoreRef.onSnapshot(this.getCollection);
-    }
     
-    componentWillUnmount(){
-        this.unsubscribe();
+    state = {
+        Recipe: '',
+    };
+    
+    constructor(props) {
+        super(props);
+        this.subscriber = firestore().collection('Users');
+        this.getCollection();
+
     }
 
-    getCollection = (querySnapshot) => {
+
+    getCollection = async () => {
         //const userArr = [];
-        querySnapshot.forEach((res) => {
-          const { Recipe } = res.data();
+        //querySnapshot.forEach((res) => {
+          //const { Recipe } = res.data();
           /*userArr.push({
             key: res.id,
             res,
             Recipe,
           });
         });*/
-        this.setState({
-          Recipe,
-       });
-        })
+        //this.setState({
+          //Recipe,
+       //});
+        //})
+        let PR = '';
+        await this.subscriber
+        .where('id', '==', Lid)
+        .get().then(querySnapshot => {
+            querySnapshot.forEach(documentSnapshot => {
+            
+                PR = documentSnapshot.data().Recipe
+                this.setState({
+                    Recipe: this.state.Recipe + ' / ' + PR
+                })
+                //console.log(documentSnapshot.data().Recipe)
+            })
+
+        });
+
     }
 
     render() {
